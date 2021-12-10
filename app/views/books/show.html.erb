@@ -21,7 +21,7 @@
   <% end %>
 </p>
 
-<p>Review From</p>
+<p>Review Form</p>
  <%= form_with(model: @book_review, local: true) do |form| %>
    <div class= "field">
      <%= form.text_area :review %>
@@ -36,7 +36,7 @@
   <ul>
     <% @book.book_review.each do |book_review|%>
       <li><%= book_review.review %>
-      (<i><%= book_review.user_id %></i>)</li>
+      (<i><%= book_review.user.name %></i>)</li>
     <% end %>
   </ul>
 
